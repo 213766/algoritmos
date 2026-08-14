@@ -13,6 +13,11 @@ ladoC = pegarValor("C")
 isTriangulo = abs(ladoB - ladoC) < ladoA and ladoA < ladoB + ladoC
 
 if isTriangulo:
-    print("Triangulo")
+    if ladoA == ladoB and ladoB == ladoC:
+        print("Triangulo EQUILATERO")
+    elif ladoA == ladoB or ladoA == ladoC or ladoB == ladoC:
+        print("Triangulo ISÓCELES")
+    else:
+        print("Triangulo ESCALENO")
 else:
     print("ERRO NÃO TRIANGULO!!!")
