@@ -25,10 +25,15 @@ valor = ajustarValor(valor,notas20,20.0)
 notas10 = pegarNotas(valor,10.0)
 valor = ajustarValor(valor,notas10,10.0)
 
-notas5 = pegarNotas(valor,5.0)
-valor = ajustarValor(valor,notas5,5.0)
+notas5 = 0
+if valor % 2 != 0:
+    notas5 = pegarNotas(valor,5.0)
+    valor = ajustarValor(valor,notas5,5.0)
 
 notas2 = pegarNotas(valor,2.0)
 valor = ajustarValor(valor,notas2,2.0)
 
-print(f"Para o valor de {valorOG} são necessárias {notas100} notas de 100, {notas50} notas de 50, {notas20} notas de 20, {notas10} notas de 10, {notas5} notas de 5 e {notas2} notas de 2. Sobram {valor} reais")
+if valor > 0:
+    print('valor não pode ser pago')
+else:
+    print(f"Para o valor de {valorOG} são necessárias {notas100} notas de 100, {notas50} notas de 50, {notas20} notas de 20, {notas10} notas de 10, {notas5} notas de 5 e {notas2} notas de 2.")
