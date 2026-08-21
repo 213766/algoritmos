@@ -1,10 +1,32 @@
+def isDataValida(dia, mes):
+    valido = mes > 0 and mes <= 12
+    if valido:
+
+        valido = mes in (4,6,9,11) and dia >= 1 and dia <= 30 \
+            or mes in (1,3,5,7,8,12) and dia >= 1 and dia <= 31 \
+            or mes == 2 and dia >= 1 and dia <= 29
+
+    return valido
+
 nome = input('Insura seu nome: ')
-data = input("Insira uma Data(dd/mm): ")
 
-dataSeparada = data.split('/')
+while True:
+    data = input("Insira uma Data(dd/mm): ")
 
-dia = int(dataSeparada[0])
-mes = int(dataSeparada[1])
+    dataSeparada = data.split('/')
+
+    dia = int(dataSeparada[0])
+    mes = int(dataSeparada[1])
+
+    if isDataValida(dia, mes):
+        break
+
+# transformar data em numero para comparacoes
+# inverter data para ano mes dia
+# nesse caso será invertido para mes dia
+
+# aqui ele é um valor numerico que pode ser comparado
+mesDia = (mes*100)+dia
 
 if dia >= 21 and mes == 1 or dia <= 18 and mes == 2:
     sig = 'aquario'
