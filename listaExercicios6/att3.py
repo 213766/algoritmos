@@ -1,4 +1,4 @@
-vogais = ('a','e','i','o','u')
+vogais = {'a','e','i','o','u'}
 consoantes = 0
 
 for _ in range(10):
