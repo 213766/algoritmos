@@ -1,8 +1,9 @@
 vogais = {'a','e','i','o','u'}
-consoantes = 0
+consoantes = []
 
 for _ in range(10):
     l = input('Insira uma letra: ')
     if l.lower() not in vogais:
-        consoantes += 1
-print(f'foram encontradas {consoantes} consoantes')
+        consoantes.append(l)
+print(f'foram encontradas {len(consoantes)} consoantes')
+print(consoantes)
