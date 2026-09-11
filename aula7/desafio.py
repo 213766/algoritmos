@@ -25,10 +25,12 @@ for venda in vendas:
 
 melhorProduto = ["", 0]
 
-# for produto in produtos:
-#     if produto[1] > melhorProduto[1]:
-#         melhorProduto = produto
+for produto, valor in produtos.items():
+    if valor > melhorProduto[1]:
+        melhorProduto[0] = produto
+        melhorProduto[1] = valor
 
-print(faturamentoTotal)
-print(produtos.keys())
-print(produtos)
+print(f"Faturamento total: {faturamentoTotal}")
+print(f"Itens individuais:\n{produtos.keys()}")
+print(f"vendas por produto:\n{produtos}")
+print(f"Produto com maior faturamento: {melhorProduto}")
