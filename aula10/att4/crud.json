@@ -1,0 +1,17 @@
+{
+    "0": {
+        "nome": "a",
+        "email": "a",
+        "idade": "a"
+    },
+    "1": {
+        "nome": "b",
+        "email": "b",
+        "idade": "b"
+    },
+    "2": {
+        "nome": "c",
+        "email": "c",
+        "idade": "c"
+    }
+}
