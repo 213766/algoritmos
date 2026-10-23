@@ -13,7 +13,7 @@ rand = random.randint(1 ,len(misterios))
 misterio = misterios[rand]
 
 while not resultado and tentativas < tentativasMax:
-    resp = input(f'{misterio['misterio']}:').lower
+    resp = input(f'{misterio['misterio']}:').lower()
     resultado = resp == misterio['resposta']
     tentativas += 1
 
